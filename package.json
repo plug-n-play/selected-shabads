@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "dev": "eleventy --serve --formats=md,jpg",
+    "build": "eleventy --formats=md,jpg"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "axios": "^0.19.1",
+    "node-fetch": "^2.6.0"
+  }
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>A simple deployment with the Now API!</title>
+  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Hukamnama from Sri Darbar Sahib Amritsar</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    :root {
+      --main-txt-color: #ff4500;
+
+      --transliteration-hindi-color: #02958d;
+      --transliteration-english-color: #2196f3;
+      --translation-punjabi-color: #029520;
+      --translation-english-color: #be025b;
+
+      --primary-font-size: 30px;
+      --secondary-font-size: 30px;
+    }
+
+    body {
+      font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+        "Arial", sans-serif;
+      padding: 20px 20px 60px;
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    h2,
+    h3,
+    h4 {
+      margin-top: 1.5em;
+    }
+
+    h1 {
+      margin: 70px 0 40px;
+      text-align: center;
+      font-size: 45px;
+    }
+
+    a {
+      cursor: pointer;
+      color: #0076ff;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border-bottom: 1px solid white;
+    }
+
+    a:hover {
+      border-bottom: 1px solid #0076ff;
+    }
+
+    .btn {
+      color: #fff;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+
+    .btn--transliteration-hindi {
+      background: var(--transliteration-hindi-color);
+    }
+
+    .transliteration-hindi {
+      color: var(--transliteration-hindi-color);
+    }
+
+    .transliteration-english {
+      color: var(--transliteration-english-color);
+    }
+
+    .translation {
+      font-size: var(--secondary-font-size);
+    }
+
+    .translation-punjabi {
+      /* color: #0a19b0; */
+      color: var(--translation-punjabi-color);
+    }
+
+    .translation-english {
+      color: var(--translation-english-color);
+    }
+
+    @media all and (min-width: 600px) {
+      #hukamnama {
+        font-size: 36px;
+      }
+    }
+
+    @media all and (min-width: 800px) {
+      body {
+        max-width: 900px;
+      }
+    }
+
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    main {
+      font-size: 42px;
+      color: var(--main-txt-color);
+      animation: fadein 3s;
+    }
+
+    main a {
+      font-size: 22px;
+      margin-top: 60px;
+      display: inline-block;
+    }
+
+    .main-nav a {
+      font-size: 22px;
+      display: inline-block;
+      margin: 0 30px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <nav class="main-nav">
+        <a href="/" class="active">Shabads</a>
+        <a href="/hukamnama/">Hukamnama</a>
+      </nav>
+    </header>
+
+    <main>
+
+      {% if title %}<h1>{{title}}</h1>{% endif %}
+
+      {{ content | safe }}
+
+    </main>
+  </div>
+
+</body>
+
+</html>
