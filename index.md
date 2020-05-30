@@ -2,16 +2,13 @@
 title: Collection of selected Shabads
 layout: layout.njk
 pagination:
-  data: collections.blog
+  data: collections.shabad
   size: 20
-  alias: blogs
+  alias: shabads
 ---
 
-{% for blog in blogs %}
+{% for shabad in shabads %}
 
-- [{{blog.data.title}}]({{blog.url}})
+- [{{shabad.data.title}}]({{shabad.url}})
 
 {% endfor %}
-
-<!-- {% if pagination.href.previous %}<a href="{{pagination.href.previous}}">Previous Page</a>{% endif %}
-{% if pagination.href.next %}<a href="{{pagination.href.next}}">Next Page</a>{% endif %} -->
